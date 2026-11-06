@@ -1,0 +1,355 @@
+/* ===== PALETA ===== */
+:root {
+  --morado: #7028E8;
+  --morado-oscuro: #4B19B5;
+  --azul: #168BFA;
+  --turquesa: #00BFA6;
+  --rosa: #FF4F9A;
+  --amarillo: #FFC247;
+  --naranja: #FF884D;
+  --verde: #32C875;
+  --fondo: #F7F5FF;
+  --texto: #25164A;
+  --texto-sec: #77718B;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+body {
+  font-family: 'Nunito', 'Roboto', sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  line-height: 1.5;
+}
+
+a { text-decoration: none; color: inherit; }
+
+.material-icons-round { vertical-align: middle; }
+
+/* ===== BOTONES ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 24px;
+  border-radius: 30px;
+  font-weight: 800;
+  font-size: 15px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+  font-family: inherit;
+}
+.btn:hover { transform: translateY(-3px); }
+
+.btn-gradient {
+  background: linear-gradient(90deg, var(--morado), var(--azul));
+  color: #fff;
+  box-shadow: 0 5px 12px rgba(112, 40, 232, .25);
+}
+.btn-primary {
+  background: var(--morado);
+  color: #fff;
+  padding: 19px 24px;
+  box-shadow: 0 8px 20px rgba(112, 40, 232, .3);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--morado);
+  border-color: var(--morado);
+  padding: 19px 22px;
+}
+.btn-outline:hover { background: rgba(112, 40, 232, .06); }
+.btn-white {
+  background: #fff;
+  color: var(--morado);
+  padding: 23px 34px;
+  border-radius: 35px;
+  font-weight: 900;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 30px;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(112, 40, 232, .10);
+}
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo-icon {
+  width: 48px; height: 48px;
+  display: grid; place-items: center;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--morado), var(--azul));
+  color: #fff;
+  box-shadow: 0 5px 12px rgba(112, 40, 232, .25);
+}
+.logo-icon .material-icons-round { font-size: 30px; }
+.logo-text { font-size: 26px; font-weight: 900; color: var(--morado); }
+
+.nav-links { margin-left: auto; display: flex; gap: 6px; }
+.nav-links a {
+  padding: 12px 12px;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 12px;
+  transition: background .2s, color .2s;
+}
+.nav-links a:hover { background: #EDE4FF; color: var(--morado); }
+
+.btn-nav { padding: 13px 20px; }
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--morado);
+  cursor: pointer;
+}
+.menu-toggle .material-icons-round { font-size: 32px; }
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 610px;
+  display: flex;
+  align-items: center;
+  padding: 75px 25px;
+  background:
+    linear-gradient(135deg, rgba(112,40,232,.12), rgba(22,139,250,.08), rgba(255,255,255,.10)),
+    url('assets/img/fondo_KidsNova.png') center / cover no-repeat,
+    linear-gradient(135deg, #E9DEFF, #D7ECFF 55%, #FFE3F0);
+}
+.hero-card {
+  width: 100%;
+  max-width: 600px;
+  margin-left: max(0px, calc((100% - 1200px) / 2));
+  padding: 30px;
+  background: rgba(255, 255, 255, .91);
+  border: 2px solid #fff;
+  border-radius: 32px;
+  box-shadow: 0 12px 30px rgba(112, 40, 232, .15);
+}
+.pill {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #EDE4FF;
+  color: var(--morado);
+  font-weight: 900;
+  font-size: 12px;
+  border-radius: 30px;
+}
+.hero h1 {
+  margin: 25px 0 20px;
+  font-size: 49px;
+  line-height: 1.15;
+  font-weight: 900;
+}
+.hero p { font-size: 17px; line-height: 1.7; color: var(--texto-sec); }
+.hero-buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.hero-datos {
+  display: flex; flex-wrap: wrap; gap: 15px;
+  margin-top: 24px;
+  font-size: 13px; font-weight: 800; color: var(--texto-sec);
+}
+.hero-datos .material-icons-round { color: var(--verde); font-size: 18px; margin-right: 4px; }
+
+/* ===== SECCIONES ===== */
+.section {
+  padding: 85px 25px;
+  text-align: center;
+}
+.section h2 { font-size: 34px; font-weight: 900; margin: 16px 0 14px; }
+.section-sub {
+  max-width: 650px;
+  margin: 0 auto 45px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--texto-sec);
+}
+.tag {
+  display: inline-block;
+  padding: 9px 18px;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: var(--c);
+  border-radius: 30px;
+  position: relative;
+  isolation: isolate;
+}
+.tag::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: var(--c);
+  opacity: .12;
+  border-radius: 30px;
+  z-index: -1;
+}
+
+.section-materias { background: linear-gradient(#fff, #F4F0FF); }
+.section-beneficios { background: linear-gradient(135deg, #F0E9FF, #EAF4FF, #FFF0F7); }
+.section-grados { background: #fff; }
+.section-pasos { background: linear-gradient(135deg, #F6F2FF, #EAF5FF); }
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* ===== TARJETAS ===== */
+.card {
+  background: #fff;
+  border-radius: 25px;
+  padding: 25px;
+  box-shadow: 0 7px 18px color-mix(in srgb, var(--c) 12%, transparent);
+  transition: transform .22s, box-shadow .22s;
+  opacity: 0;
+  transform: translateY(25px);
+}
+.card.visible { opacity: 1; transform: translateY(0); }
+.card.visible:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 25px color-mix(in srgb, var(--c) 25%, transparent);
+}
+.card .icon-box {
+  display: grid; place-items: center;
+  background: var(--bg);
+  color: var(--c);
+}
+.card h3 { font-weight: 900; }
+.card p { color: var(--texto-sec); line-height: 1.6; }
+
+/* Materia */
+.card-materia {
+  width: 285px; text-align: left;
+  border-radius: 27px;
+  border: 1.5px solid color-mix(in srgb, var(--c) 25%, transparent);
+}
+.card-materia .icon-box { width: 75px; height: 75px; border-radius: 23px; }
+.card-materia .icon-box .material-icons-round { font-size: 42px; }
+.card-materia h3 { margin: 22px 0 12px; font-size: 22px; color: var(--c); }
+.card-materia p { font-size: 14px; }
+.card-materia .more {
+  display: flex; align-items: center; gap: 5px;
+  margin-top: 18px;
+  font-size: 12px; font-weight: 800; color: var(--c);
+}
+.card-materia .more .material-icons-round { font-size: 17px; }
+
+/* Beneficio */
+.card-beneficio { width: 270px; }
+.card-beneficio .icon-box { width: 78px; height: 78px; border-radius: 25px; margin: 0 auto; }
+.card-beneficio .icon-box .material-icons-round { font-size: 42px; }
+.card-beneficio h3 { margin: 20px 0 12px; font-size: 19px; color: var(--texto); }
+.card-beneficio p { font-size: 14px; }
+
+/* Grado */
+.card-grado {
+  width: 270px; padding: 23px;
+  border: 1px solid color-mix(in srgb, var(--c) 20%, transparent);
+}
+.card-grado .icon-box { width: 68px; height: 68px; border-radius: 22px; margin: 0 auto; }
+.card-grado .icon-box .material-icons-round { font-size: 38px; }
+.card-grado h3 { margin: 17px 0 10px; font-size: 18px; color: var(--c); }
+.card-grado p { font-size: 13px; }
+
+/* Paso */
+.card-paso { width: 260px; padding: 23px; }
+.card-paso .top { display: flex; justify-content: space-between; align-items: center; }
+.card-paso .icon-box { width: 62px; height: 62px; border-radius: 20px; }
+.card-paso .icon-box .material-icons-round { font-size: 34px; }
+.card-paso .num {
+  font-size: 32px; font-weight: 900;
+  color: color-mix(in srgb, var(--c) 25%, transparent);
+}
+.card-paso h3 { margin: 20px 0 10px; font-size: 18px; color: var(--texto); }
+.card-paso p { font-size: 13px; }
+
+/* ===== DESCARGA ===== */
+.descarga {
+  padding: 85px 25px;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(135deg, #6424DE, #3676F6, #04BFD0);
+}
+.descarga-icon {
+  width: 95px; height: 95px;
+  margin: 0 auto 25px;
+  display: grid; place-items: center;
+  background: rgba(255, 255, 255, .18);
+  border: 2px solid rgba(255, 255, 255, .4);
+  border-radius: 30px;
+  animation: flotar 3s ease-in-out infinite;
+}
+.descarga-icon .material-icons-round { font-size: 55px; }
+@keyframes flotar { 50% { transform: translateY(-10px); } }
+.descarga h2 { font-size: 34px; font-weight: 900; margin-bottom: 18px; }
+.descarga p { max-width: 650px; margin: 0 auto 32px; font-size: 17px; line-height: 1.7; }
+.descarga-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin: 25px 0 20px; }
+.descarga-tags span {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 10px 15px;
+  font-size: 12px; font-weight: 800;
+  background: rgba(255, 255, 255, .18);
+  border: 1px solid rgba(255, 255, 255, .35);
+  border-radius: 30px;
+}
+.descarga-tags .material-icons-round { font-size: 18px; }
+.descarga small { color: rgba(255, 255, 255, .7); font-size: 13px; }
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #21183D;
+  padding: 45px 25px;
+  text-align: center;
+  color: rgba(255, 255, 255, .7);
+}
+.footer-logo {
+  display: flex; justify-content: center; align-items: center; gap: 10px;
+  color: #fff; font-size: 28px; font-weight: 900;
+  margin-bottom: 15px;
+}
+.footer-logo .material-icons-round { font-size: 35px; }
+.footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px; margin: 25px 0; }
+.footer-links a { font-weight: 700; transition: color .2s; }
+.footer-links a:hover { color: #fff; }
+.footer hr { width: 150px; margin: 0 auto 20px; border: 0; height: 1px; background: rgba(255, 255, 255, .24); }
+.footer small { color: rgba(255, 255, 255, .54); font-size: 12px; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 850px) {
+  .navbar { padding: 12px 18px; }
+  .menu-toggle { display: block; margin-left: auto; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    flex-direction: column;
+    background: #fff;
+    padding: 12px 18px 18px;
+    box-shadow: 0 12px 20px rgba(112, 40, 232, .12);
+  }
+  .nav-links.abierto { display: flex; }
+  .btn-nav-text { display: none; }
+  .btn-nav { padding: 13px 14px; }
+}
+
+@media (max-width: 750px) {
+  .hero { padding: 50px 18px; }
+  .hero-card { margin: 0 auto; text-align: center; }
+  .hero h1 { font-size: 36px; }
+  .hero-buttons, .hero-datos { justify-content: center; }
+  .section h2, .descarga h2 { font-size: 28px; }
+  .card-materia, .card-beneficio, .card-grado, .card-paso { width: 100%; max-width: 340px; }
+}

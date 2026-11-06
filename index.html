@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KidsNova | Aprende jugando</title>
+  <meta name="description" content="KidsNova, una aplicación educativa donde los niños aprenden, juegan y desarrollan nuevas habilidades.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- BARRA DE NAVEGACIÓN -->
+  <header class="navbar">
+    <a href="#inicio" class="logo">
+      <span class="logo-icon"><span class="material-icons-round">school</span></span>
+      <span class="logo-text">KidsNova</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#inicio">Inicio</a>
+      <a href="#materias">Materias</a>
+      <a href="#beneficios">Beneficios</a>
+      <a href="#grados">Grados</a>
+      <a href="#como-funciona">Cómo funciona</a>
+    </nav>
+
+    <a href="apk/kidsnova.apk" download class="btn btn-gradient btn-nav">
+      <span class="material-icons-round">download</span>
+      <span class="btn-nav-text">Descargar</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+      <span class="material-icons-round">menu</span>
+    </button>
+  </header>
+
+  <!-- PORTADA -->
+  <section class="hero" id="inicio">
+    <div class="hero-card">
+      <span class="pill">🚀 EDUCACIÓN DIVERTIDA PARA TODOS</span>
+      <h1>¡Aprender nunca fue tan divertido!</h1>
+      <p>Descubre KidsNova, una aplicación educativa donde los niños aprenden, juegan y desarrollan nuevas habilidades mientras se divierten.</p>
+
+      <div class="hero-buttons">
+        <a href="apk/kidsnova.apk" download class="btn btn-primary">
+          <span class="material-icons-round">android</span> Descargar aplicación
+        </a>
+        <a href="#materias" class="btn btn-outline">
+          <span class="material-icons-round">explore</span> Conoce KidsNova
+        </a>
+      </div>
+
+      <div class="hero-datos">
+        <span><span class="material-icons-round">check_circle</span> Aprende jugando</span>
+        <span><span class="material-icons-round">check_circle</span> Para Android</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MATERIAS -->
+  <section class="section section-materias" id="materias">
+    <span class="tag" style="--c:#7028E8">NUESTRO CONTENIDO</span>
+    <h2>Explora nuestras materias</h2>
+    <p class="section-sub">En KidsNova encontrarás diferentes áreas de aprendizaje diseñadas para que los niños descubran nuevos conocimientos a través de actividades educativas.</p>
+
+    <div class="cards" id="gridMaterias"></div>
+  </section>
+
+  <!-- BENEFICIOS -->
+  <section class="section section-beneficios" id="beneficios">
+    <span class="tag" style="--c:#168BFA">VENTAJAS DE KIDSNOVA</span>
+    <h2>¿Por qué elegir KidsNova?</h2>
+    <p class="section-sub">Una experiencia educativa que combina conocimiento, diversión y motivación.</p>
+
+    <div class="cards" id="gridBeneficios"></div>
+  </section>
+
+  <!-- GRADOS -->
+  <section class="section section-grados" id="grados">
+    <span class="tag" style="--c:#FF4F9A">PARA CADA ETAPA</span>
+    <h2>Aprendizaje para cada grado</h2>
+    <p class="section-sub">KidsNova ofrece actividades educativas para los seis grados de educación primaria.</p>
+
+    <div class="cards" id="gridGrados"></div>
+  </section>
+
+  <!-- CÓMO FUNCIONA -->
+  <section class="section section-pasos" id="como-funciona">
+    <span class="tag" style="--c:#00BFA6">EMPIEZA TU AVENTURA</span>
+    <h2>¿Cómo funciona KidsNova?</h2>
+    <p class="section-sub">Comenzar es muy sencillo. Sigue estos pasos y disfruta aprendiendo.</p>
+
+    <div class="cards" id="gridPasos"></div>
+  </section>
+
+  <!-- DESCARGA -->
+  <section class="descarga" id="descarga">
+    <div class="descarga-icon"><span class="material-icons-round">rocket_launch</span></div>
+    <h2>¡Comienza tu aventura con KidsNova!</h2>
+    <p>Descarga la aplicación y descubre una nueva forma de aprender, practicar y divertirte con actividades educativas.</p>
+
+    <a href="apk/kidsnova.apk" download class="btn btn-white">
+      <span class="material-icons-round">download</span> DESCARGAR KIDSNOVA
+    </a>
+
+    <div class="descarga-tags">
+      <span><span class="material-icons-round">android</span> Android</span>
+      <span><span class="material-icons-round">download_done</span> Descarga gratuita</span>
+      <span><span class="material-icons-round">school</span> Educación primaria</span>
+    </div>
+    <small>La descarga requiere un dispositivo Android compatible.</small>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-logo">
+      <span class="material-icons-round">school</span>
+      <span>KidsNova</span>
+    </div>
+    <p>Aprender jugando, crecer descubriendo.</p>
+    <nav class="footer-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#materias">Materias</a>
+      <a href="#beneficios">Beneficios</a>
+      <a href="#grados">Grados</a>
+      <a href="#descarga">Descargar</a>
+    </nav>
+    <hr>
+    <small>© 2026 KidsNova. Todos los derechos reservados.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
